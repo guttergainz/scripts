@@ -12,6 +12,6 @@ cd snarkOS
 git fetch origin testnet3:testnet3
 git checkout testnet3
 ./build_ubuntu.sh
-cargo install --path .
+cargo install --locked --path .
 snarkos account new
 screen -S aleo -d -m ./run-prover.sh
