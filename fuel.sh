@@ -9,10 +9,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 curl https://install.fuel.network | sh
 fuel-core-keygen new --key-type peering
 curl -sSL https://raw.githubusercontent.com/FuelLabs/fuel-core/v0.22.0/deployment/scripts/chainspec/beta_chainspec.json > chainConfig.json
-screen -S fuel
 read -p "Enter value for private key : " VARIABLE1
 read -p "Enter value for node name : " VARIABLE2
 read -p "Enter value for RPC endpoint : " VARIABLE3
+screen -S fuel
 fuel-core run \
 --service-name VARIABLE2 \
 --keypair VARIABLE1 \
