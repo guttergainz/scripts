@@ -1,23 +1,24 @@
 cd ~
-mkdir -p $1
-cd $1
+mkdir -p "$1"
+cd "$1" || exit
 mkdir fuel
-cd fuel
+cd fuel || exit
 sudo apt-get update && sudo apt-get upgrade -y
 apt install screen git -y
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 curl https://install.fuel.network | sh
 curl -sSL https://raw.githubusercontent.com/FuelLabs/fuel-core/v0.22.0/deployment/scripts/chainspec/beta_chainspec.json > chainConfig.json
 source /root/.bashrc
+source ~/.bashrc
 fuel-core-keygen new --key-type peering
 read -p "Enter value for private key : " VARIABLE1
 read -p "Enter value for node name : " VARIABLE2
 read -p "Enter value for RPC endpoint : " VARIABLE3
 screen -S fuel
 fuel-core run \
---service-name VARIABLE2 \
---keypair VARIABLE1 \
---relayer VARIABLE3 \
+--service-name "$VARIABLE2" \
+--keypair "$VARIABLE1" \
+--relayer "$VARIABLE3" \
 --ip 0.0.0.0 --port 4631 --peering-port 35433 \
 --db-path  ~/.fuel_beta5 \
 --chain ./chainConfig.json \
