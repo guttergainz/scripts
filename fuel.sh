@@ -8,8 +8,8 @@ apt install screen git -y
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 curl https://install.fuel.network | sh
 curl -sSL https://raw.githubusercontent.com/FuelLabs/fuel-core/v0.22.0/deployment/scripts/chainspec/beta_chainspec.json > chainConfig.json
+sleep 15
 source /root/.bashrc
-source ~/.bashrc
 fuel-core-keygen new --key-type peering
 read -p "Enter value for private key : " VARIABLE1
 read -p "Enter value for node name : " VARIABLE2
