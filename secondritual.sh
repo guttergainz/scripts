@@ -1,4 +1,4 @@
-nano ~/infernet-container-starter/deploy/config.json
+nano deploy/config.json
 docker restart anvil-node
 docker restart hello-world
 docker restart deploy-node-1
