@@ -1,3 +1,9 @@
+nano ~/infernet-container-starter/deploy/config.json
+docker restart anvil-node
+docker restart hello-world
+docker restart deploy-node-1
+docker restart deploy-fluentbit-1
+docker restart deploy-redis-1
 cd ..
 mkdir foundry
 cd foundry
