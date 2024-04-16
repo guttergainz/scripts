@@ -14,7 +14,7 @@ screen -S fuel
 fuel-core run \
 --service-name "$VARIABLE2" \
 --keypair "$VARIABLE1" \
---relayer "$VARIABLE3" \
+--relayer "https://ethereum-sepolia-rpc.publicnode.com" \
 --ip 0.0.0.0 --port 4631 --peering-port 35433 \
 --db-path  ~/.fuel_beta5 \
 --chain ./chainConfig.json \
