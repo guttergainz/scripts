@@ -2,7 +2,7 @@ ufw allow 8000
 sudo ufw allow ssh
 ufw allow 9000
 sudo ufw enable
-sudo echo 'deb http://security.ubuntu.com/ubuntu jammy-security main' >> nano /etc/apt/sources.list
+sudo echo 'deb http://security.ubuntu.com/ubuntu jammy-security main' >> /etc/apt/sources.list
 sudo apt update
 sudo apt upgrade
 sudo apt install libc6
